@@ -37,7 +37,7 @@ export const dataPage = {
     
     // Registro
     getCreateCta:() => {
-        return cy.get('#signup').click();
+        return cy.contains('Register').click();
     },
     
     getFisrtname:() => {
