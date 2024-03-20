@@ -1,0 +1,22 @@
+{
+  "name": "campsecond",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patoabello/cypressCamp.git"
+  },
+  "author": "Pato Abello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Patoabello/cypressCamp/issues"
+  },
+  "homepage": "https://github.com/Patoabello/cypressCamp#readme",
+  "devDependencies": {
+    "cypress": "^13.7.0"
+  }
+}
