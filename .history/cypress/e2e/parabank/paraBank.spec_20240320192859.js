@@ -11,15 +11,15 @@ describe('Manage page', () => {
         cy.get('h1').first().should('have.text', 'Contact List App')
 
         dataPage.getCreateCta();
-
+        
        // dataPage.getUserName();
        // dataPage.getPass();
        // dataPage.getButtonLogi();
        
      
-      dataPage.getFisrtname();
-      dataPage.getInputLastName();
-      /*  dataPage.getInputAddress();
+     /*  dataPage.getFisrtname();
+       dataPage.getInputLastName();
+       dataPage.getInputAddress();
        dataPage.getInputCity();
        dataPage.getInputState();
        dataPage.getInputZipCode();

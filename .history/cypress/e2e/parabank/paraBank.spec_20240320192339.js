@@ -7,19 +7,16 @@ describe('Manage page', () => {
     it('manejo de dom', () => {
  
         cy.visit('https://thinking-tester-contact-list.herokuapp.com/');
-        cy.get('h1').should('exist');
-        cy.get('h1').first().should('have.text', 'Contact List App')
-
-        dataPage.getCreateCta();
+        cy.url().should('https://thinking-tester-contact-list.herokuapp.com/');
 
        // dataPage.getUserName();
        // dataPage.getPass();
        // dataPage.getButtonLogi();
-       
+       dataPage.getCreateCta();
      
-      dataPage.getFisrtname();
-      dataPage.getInputLastName();
-      /*  dataPage.getInputAddress();
+     /*  dataPage.getFisrtname();
+       dataPage.getInputLastName();
+       dataPage.getInputAddress();
        dataPage.getInputCity();
        dataPage.getInputState();
        dataPage.getInputZipCode();

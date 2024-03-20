@@ -45,7 +45,7 @@ export const dataPage = {
   },
    
     getInputLastName: () => {
-        return cy.get('[id="lastName"]').type(lastName);
+        return cy.get('[id="customer.lastName"]').type(lastName);
     },
     getInputAddress: () => {
         return cy.get('[id="customer.address.street"]').type(street);

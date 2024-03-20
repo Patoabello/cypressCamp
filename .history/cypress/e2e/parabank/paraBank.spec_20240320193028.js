@@ -18,8 +18,8 @@ describe('Manage page', () => {
        
      
       dataPage.getFisrtname();
-      dataPage.getInputLastName();
-      /*  dataPage.getInputAddress();
+     /*  dataPage.getInputLastName();
+       dataPage.getInputAddress();
        dataPage.getInputCity();
        dataPage.getInputState();
        dataPage.getInputZipCode();
