@@ -54,12 +54,16 @@ export const dataPage = {
     },
    
 
+
+
+
+    getInpuUserName: () => {
+        return cy.get('[id="customer.username"]').type(userName);
+    },
+
+
     getButtonReg: () => {
         return cy.get('[id="submit"]').click();
     },
-
-    getAddContact:() => {
-        return cy.get('[id="add-contact"]').click();
-    }
 
 }

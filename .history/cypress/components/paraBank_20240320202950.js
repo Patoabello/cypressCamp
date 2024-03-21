@@ -7,12 +7,15 @@ let firstname = "Pato";
 let lastName = "QA";
 
 // faker  
-let email = faker.internet.email();
+let street = faker.location.street();
+let city = faker.location.city();
 let state = faker.location.state();
-
+let zipCode = faker.location.zipCode();
+let phone = faker.phone.number();
+let ssn = faker.datatype.number();
 
 let userName = firstname + " " + lastName;
-let passWord = "jugodepera";
+let passWord = state;
 
 // Export
 export const dataPage = {
@@ -40,26 +43,33 @@ export const dataPage = {
     getFisrtname:() => {
         return cy.get('[id="firstName"]').type(firstname);
   },
-
+   
     getInputLastName: () => {
         return cy.get('[id="lastName"]').type(lastName);
     },
+   
     
     getInputEmail:() => {
-        return cy.get('[id="email"]').type(email);
-    },
+        return 
+    }
    
+    
+   
+
+    getInpuUserName: () => {
+        return cy.get('[id="customer.username"]').type(userName);
+    },
+
     getInpuPassWord: () => {
-        return cy.get('[id="password"]').type(passWord);
+        return cy.get('[id="customer.password"]').type(passWord);
     },
-   
+
+    getInpuConfirm: () => {
+        return cy.get('[id="repeatedPassword"]').type(passWord);
+    },
 
     getButtonReg: () => {
-        return cy.get('[id="submit"]').click();
+        return cy.get('[colspan="2"] > .button').click();
     },
-
-    getAddContact:() => {
-        return cy.get('[id="add-contact"]').click();
-    }
 
 }

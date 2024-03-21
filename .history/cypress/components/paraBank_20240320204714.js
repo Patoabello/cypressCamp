@@ -40,7 +40,7 @@ export const dataPage = {
     getFisrtname:() => {
         return cy.get('[id="firstName"]').type(firstname);
   },
-
+  
     getInputLastName: () => {
         return cy.get('[id="lastName"]').type(lastName);
     },
@@ -54,12 +54,21 @@ export const dataPage = {
     },
    
 
-    getButtonReg: () => {
-        return cy.get('[id="submit"]').click();
+
+
+
+    getInpuUserName: () => {
+        return cy.get('[id="customer.username"]').type(userName);
     },
 
-    getAddContact:() => {
-        return cy.get('[id="add-contact"]').click();
-    }
+   
+
+    getInpuConfirm: () => {
+        return cy.get('[id="repeatedPassword"]').type(passWord);
+    },
+
+    getButtonReg: () => {
+        return cy.get('[colspan="2"] > .button').click();
+    },
 
 }

@@ -12,7 +12,7 @@ let state = faker.location.state();
 
 
 let userName = firstname + " " + lastName;
-let passWord = "jugodepera";
+let passWord = state;
 
 // Export
 export const dataPage = {
@@ -40,26 +40,33 @@ export const dataPage = {
     getFisrtname:() => {
         return cy.get('[id="firstName"]').type(firstname);
   },
-
+   
     getInputLastName: () => {
         return cy.get('[id="lastName"]').type(lastName);
     },
+   
     
     getInputEmail:() => {
         return cy.get('[id="email"]').type(email);
     },
    
-    getInpuPassWord: () => {
-        return cy.get('[id="password"]').type(passWord);
-    },
+    
    
 
-    getButtonReg: () => {
-        return cy.get('[id="submit"]').click();
+    getInpuUserName: () => {
+        return cy.get('[id="customer.username"]').type(userName);
     },
 
-    getAddContact:() => {
-        return cy.get('[id="add-contact"]').click();
-    }
+    getInpuPassWord: () => {
+        return cy.get('[id="customer.password"]').type(passWord);
+    },
+
+    getInpuConfirm: () => {
+        return cy.get('[id="repeatedPassword"]').type(passWord);
+    },
+
+    getButtonReg: () => {
+        return cy.get('[colspan="2"] > .button').click();
+    },
 
 }

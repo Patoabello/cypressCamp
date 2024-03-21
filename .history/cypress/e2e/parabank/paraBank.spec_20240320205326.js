@@ -1,6 +1,6 @@
 import { dataPage } from "../../components/paraBank";
 
-const Papa = require('papaparse');
+
 
 describe('register', () => {
   
@@ -17,13 +17,9 @@ describe('register', () => {
         dataPage.getInputEmail();
         dataPage.getInpuPassWord();
         dataPage.getButtonReg();
-        dataPage.getAddContact();
    
     });
 
-    it('debería permitir trabajar con los datos de cada fila', () => {
-       // https://www.youtube.com/watch?v=8h1pUyVHqn0 
-      });
 
 
 });
