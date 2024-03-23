@@ -56,8 +56,8 @@ it('Contact list', () => {
     cy.get('h1').first().should('have.text', 'Contact List');
     cy.get('[id="add-contact"]').should('be.visible').click();
    
+
 }
-cy.get('[id="cancel"]').click();
 
 })
     

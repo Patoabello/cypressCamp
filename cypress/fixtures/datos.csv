@@ -1,3 +1,4 @@
-Name,Birthdate,Email,Phone,Address,"City, State/Province, Postal Code",Country
-Juan,18-03-1951,juan@gmail.com,998378877,Los lilenes 2332,Valparaiso,Chile
-Pedro,10-11-2020,pedro@hotmail.com,884467902,Calle 13,Santiago,Argentina
+Name,Lastname,Birthdate,Email,Phone,Address,City,Province,Postal Code,Country
+Michael ,Jackson,1951-03-18,michael@gmail.com,998378877,Los lilenes 2332,Valparaiso,Casablanca,12345,Chile
+Freddy,Mercury,1987-11-01,freddy@hotmail.com,884467902,Calle 13,Santiago,Providencia,54321,Argentina
+John,Secada,1996-12-20,john@gamil.com,558378800,Long beach,Miami,California,991134,Usa

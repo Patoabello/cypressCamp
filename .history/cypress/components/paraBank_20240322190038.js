@@ -10,11 +10,7 @@ let lastName = "QA";
 // faker  
 let email = faker.internet.email();
 let state = faker.location.state();
-const birthdateBase = faker.date.between('1990-01-01', '2022-12-31');
-let birthdate = birthdateBase.toISOString().split('T')[0];
-
-
-
+let birthdate = faker.date.birthdate();
 
 let userName = firstname + " " + lastName;
 let passWord = "jugodepera";
@@ -71,49 +67,16 @@ export const dataPage = {
 
 export const dataRegitrer = {
     getRegFisrtname:() => {
-        return cy.get('[id="firstName"]');
+        return cy.get('[id="firstName"]').type(firstname);
     },
+    
     getRegLastName: () => {
-    return cy.get('[id="lastName"]');
+    return cy.get('[id="lastName"]').type(birthdate);
     },
 
     getRegBirth:() => {
-        return cy.get('[id="birthdate"]');
-    },
-    getRegLastName: () => {
-        return cy.get('[id="lastName"]');
-    },
-    getRegEmail:() => {
-        return cy.get('[id="email"]');
-    },
-    getRegPhone: () => {
-        return cy.get('[id="phone"]');
-    },
-    getRegStreet: () => {
-        return cy.get('[id="street1"]');
-    },
-    getRegCity: () => {
-        return cy.get('[id="city"]');
-    },
-    getRegProvince: () => {
-        return cy.get('[id="stateProvince"]');
-    },
-    getRegPostalCode: () => {
-        return cy.get('[id="postalCode"]');
-    },
-    getRegCountry: () => {
-        return cy.get('[id="country"]');
-    },
-
-    //Buttons
-    getRegSubmit: () => {
-        return cy.get('[id="submit"]').click();
-    },
-    
-    getRegAddContact2: () => {
-        return cy.get('[id="add-contact"]');
+        return cy.get('[id="birthdate"]').type('2000-01-01');
     }
-//---
-    
+
 
 }

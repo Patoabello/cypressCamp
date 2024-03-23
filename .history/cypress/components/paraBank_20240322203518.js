@@ -73,6 +73,7 @@ export const dataRegitrer = {
     getRegFisrtname:() => {
         return cy.get('[id="firstName"]');
     },
+    
     getRegLastName: () => {
     return cy.get('[id="lastName"]');
     },
@@ -80,11 +81,9 @@ export const dataRegitrer = {
     getRegBirth:() => {
         return cy.get('[id="birthdate"]');
     },
+
     getRegLastName: () => {
         return cy.get('[id="lastName"]');
-    },
-    getRegEmail:() => {
-        return cy.get('[id="email"]');
     },
     getRegPhone: () => {
         return cy.get('[id="phone"]');
@@ -104,15 +103,9 @@ export const dataRegitrer = {
     getRegCountry: () => {
         return cy.get('[id="country"]');
     },
-
-    //Buttons
     getRegSubmit: () => {
         return cy.get('[id="submit"]').click();
     },
-    
-    getRegAddContact2: () => {
-        return cy.get('[id="add-contact"]');
-    }
 //---
     
 

@@ -109,9 +109,8 @@ export const dataRegitrer = {
     getRegSubmit: () => {
         return cy.get('[id="submit"]').click();
     },
-    
     getRegAddContact2: () => {
-        return cy.get('[id="add-contact"]');
+        return cy.get('[id="add-contact"]').click();
     }
 //---
     

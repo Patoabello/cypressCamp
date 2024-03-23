@@ -30,16 +30,12 @@ describe('Read CSV', () => {
 });
 
 it('Contact list', () => {
-   // cy.get('h1').should('exist');
-   // cy.get('h1').first().should('have.text', 'Add Contact');
-    dataPage.getAddContact();
-
-
    for (let i=0; i<3; i++){ 
     const randomRow = Math.floor(Math.random() * table.length);
     
-    
-   
+    dataPage.getAddContact();
+    cy.get('h1').should('exist');
+    cy.get('h1').first().should('have.text', 'Add Contact')
     dataRegitrer.getRegFisrtname().type(table[randomRow]['Name']);
     dataRegitrer.getRegLastName().type(table[randomRow]['Lastname']);
     dataRegitrer.getRegBirth().type(table[randomRow]['Birthdate']);
@@ -50,14 +46,10 @@ it('Contact list', () => {
     dataRegitrer.getRegProvince().type(table[randomRow]['Province']);
     dataRegitrer.getRegPostalCode().type(table[randomRow]['Postal Code']);
     dataRegitrer.getRegCountry().type(table[randomRow]['Country']);
- 
+
     dataRegitrer.getRegSubmit();
-     cy.get('h1').should('exist');
-    cy.get('h1').first().should('have.text', 'Contact List');
-    cy.get('[id="add-contact"]').should('be.visible').click();
-   
+
 }
-cy.get('[id="cancel"]').click();
 
 })
     
