@@ -24,9 +24,11 @@ let passWord = "jugodepera";
 export const dataPage = {
 
      
-  // Login
+
     getUserName:() => {
-          return cy.get('[name="username"]').click().type(name)
+    // Login
+
+        return cy.get('[name="username"]').click().type(name)
     },
     getPass:() => {
         return cy.get('[name="password"]').type('1234')
