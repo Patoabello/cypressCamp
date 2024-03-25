@@ -42,7 +42,7 @@ export const dataPage = {
     },
     
     getFisrtname:() => {
-        return cy.get('[id="firstName"]').type(firstname);
+        return cy.get('[id="firstName"]').type(name);
   },
 
     getInputLastName: () => {

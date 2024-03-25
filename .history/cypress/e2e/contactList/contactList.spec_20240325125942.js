@@ -2,7 +2,7 @@ import { dataPage } from '../../components/paraBank';
 import { dataRegitrer } from '../../components/paraBank';
 
 
-const neatCSV = require('neat-csv');
+const neatCSV = require('neat-csv'); // biblioteca q convierte el csv a obj.
 
 describe('Read CSV', () => {
   let table;
@@ -10,11 +10,11 @@ describe('Read CSV', () => {
   before(() => {
     cy
       .fixture('datos.csv')
-      .then(neatCSV) // convert csv file into an object
+      .then(neatCSV) // ctransformo el csv en un objecto
       .then(data => {
         table = data;
       })
-      .then(console.table)
+      .then(console.table) // muestro el objeto por consola en la pag para confirmar los datos
   });
 
   it('Home page', () => {
@@ -36,9 +36,8 @@ it('Contact list', () => {
 
 
    for (let i=0; i<3; i++){ 
-    const randomRow = Math.floor(Math.random() * table.length);
-    
-    
+    const randomRow = Math.floor(Math.random() * table.length); // Recorro de forma random las columnas para selecionar datos
+        
    
     dataRegitrer.getRegFisrtname().type(table[randomRow]['Name']);
     dataRegitrer.getRegLastName().type(table[randomRow]['Lastname']);
@@ -57,7 +56,7 @@ it('Contact list', () => {
     cy.get('[id="add-contact"]').should('be.visible').click();
    
 }
-cy.get('[id="cancel"]').click();
+cy.get('[id="cancel"]').click(); // salgo de ciclo ya que se han agregado los 3 contactos.
 
 })
     
