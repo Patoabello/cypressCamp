@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Patoabello/cypressCamp#readme",
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "cypress": "^13.7.0",
+    "cypress": "^13.7.1",
     "neat-csv": "^5.2.0"
   },
   "dependencies": {
