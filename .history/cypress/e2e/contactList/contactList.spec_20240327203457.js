@@ -3,7 +3,7 @@ import { dataRegitrer } from '../../components/contactList';
 
 
 const neatCSV = require('neat-csv'); // biblioteca q convierte el csv a obj.
-// ***
+
 describe('Read CSV', () => {
   let table;
 
